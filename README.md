@@ -22,3 +22,5 @@ Ensure that you have [Docker](https://docs.docker.com/docker-for-mac/install/) a
 
     ```bash
     make clear-dangerous
+
+If you have questions or suggestions, feel free to open an issue or start a discussion. I’m dedicated to improving the project. Thanks for your support!
