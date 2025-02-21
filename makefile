@@ -1,9 +1,9 @@
 .PHONY: start-laravel-docker init-laravel-docker clear-dangerous
 
 start-laravel-docker:
+	./setup_containers.sh
 	@make build
 	@make up
-	./setup_containers.sh
 	docker compose exec app composer install
 	docker compose exec app cp .env.example .env
 	docker compose exec app php artisan key:generate
@@ -27,7 +27,6 @@ clear-dangerous:
 		make down-v; \
 		rm -r src; \
 		rm docker-compose.yml; \
-		rm .env; \
 	else \
 		echo "Clear action canceled."; \
 	fi
